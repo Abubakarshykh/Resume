@@ -1,4 +1,5 @@
 import Cursor from "@/components/Cursor";
+import Companion from "@/components/Companion";
 import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import Showcase from "@/components/sections/Showcase";
@@ -19,6 +20,7 @@ export default function Page() {
         <Contact />
       </main>
       <Footer />
+      <Companion />
       <Cursor />
     </>
   );

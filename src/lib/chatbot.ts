@@ -87,6 +87,19 @@ export function localAnswer(input: string): { text: string; card: boolean } {
     return { text: "Anytime. Say hi on email whenever you like.", card: false };
   if (/\b(hi|hello|hey|salam|assalam)/.test(t))
     return { text: "Hey! Ask me about my projects, stack or experience.", card: false };
+  if (has(t, "normie", "headphone", "mascot", "companion", "emoji"))
+    return { text: "That's Normie — the studio AI floating on this page. I answer from the same facts as the contact chat.", card: false };
 
   return { text: CHATBOT.fallback, card: true };
+}
+
+/** Section the companion should fly to after an answer. */
+export function guideSection(input: string): string | null {
+  const t = input.toLowerCase();
+  if (has(t, "hire", "hiring", "i have a project", "contact", "email", "reach", "linkedin", "github")) return "contact";
+  if (has(t, "stack", "skill", "tech", "tools", "react", "next", "python", "node")) return "stack";
+  if (has(t, "experience", "intern", "role", "company", "career", "eveness", "journey")) return "journey";
+  if (has(t, "project", "built", "build", "portfolio", "made", "work", "normies", "taskflow", "gesture", "yearbook", "treasure", "scanner", "demo"))
+    return "builds";
+  return null;
 }

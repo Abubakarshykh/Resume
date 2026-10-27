@@ -10,7 +10,7 @@ import { useEffect, useRef } from "react";
  * The ring never tints or hides content, and the native cursor stays on buttons.
  */
 const INTERACTIVE = "a[href], button:not([disabled]), .btn, [role='button']";
-const MAGNETIC = ".btn, .quick, .nav__theme, .story-ring, .chat__send, .plist__item, .nav__link";
+const MAGNETIC = ".btn, .quick, .nav__theme, .story-ring, .chat__send, .plist__item, .nav__link, .companion-panel__close";
 const PULL = 0.2; // how far a button leans toward the pointer (0 = off)
 const MAX_PULL = 8; // px
 

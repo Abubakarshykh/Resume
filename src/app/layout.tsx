@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "../styles/sections.css";
+import "../styles/companion.css";
 
 // Fonts are self-hosted (from the @fontsource packages) so the build works offline.
 // To switch to next/font/google, replace these three with Bricolage_Grotesque,
